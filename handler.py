@@ -42,7 +42,7 @@ def health_insurance_predict():
         return df_response
     
     else: 
-        return Reponse( '{}', status=200, mimetype='application/json' )
+        return Response( '{}', status=200, mimetype='application/json' )
 
 if __name__ == '__main__':
     port = os.environ.get( 'PORT', 5000 )
