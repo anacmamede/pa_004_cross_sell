@@ -21,8 +21,6 @@ class HealthInsurance(object):
         return df_raw
     
     def feature_engineering(self, df1):
-        #df1['region_code'] = df1['region_code'].astype(int)
-        #df1['policy_sales_channel'] = df1['policy_sales_channel'].astype(int)
         # vehicle_age
         df1['vehicle_age'] = df1['vehicle_age'].apply(lambda x: 'over_2_years' if x=='> 2 Years' else 'between_1_2_year' if x=='1-2 Year' else 'below_1_year')
         # vehicle_damage
